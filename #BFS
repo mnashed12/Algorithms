@@ -1,0 +1,15 @@
+def bfs(self, graph, start):
+        # Breadth-First Search (BFS)
+        # Big O: O(V + E) where V is the number of vertices and E is the number of edges
+        # Description: Graph traversal algorithm that explores all neighbors at the current depth
+        # level before moving on to nodes at the next level of depth.
+        visited = []
+        queue = [start]
+        while queue:
+            node = queue.pop(0)
+            if node not in visited:
+                visited.append(node)
+                for neighbor in graph[node]:
+                    if neighbor not in visited:
+                        queue.append(neighbor)
+        return visited
