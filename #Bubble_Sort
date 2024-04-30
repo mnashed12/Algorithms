@@ -1,0 +1,10 @@
+def bubble_sort(self, arr):
+        # Bubble Sort
+        # Big O: O(n^2)
+        # Description: Simple sorting algorithm where each pair of adjacent elements are compared
+        # and swapped if they are in the wrong order.
+        n = len(arr)
+        for i in range(n):
+            for j in range(n - i - 1):
+                if arr[j] > arr[j + 1]:
+                    arr[j], arr[j + 1] = arr[j + 1], arr[j]
